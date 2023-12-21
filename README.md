@@ -50,6 +50,14 @@ tools.
     $ cd .xmonad
     $ ./install.sh
 
+The polybar config will be placed in `~/.config/polybar/config.ini`
+
+When making changes, it may be useful to watch the log for errors or info. It
+will be overwritten every time xmonad is restarted (with mod-q, which will also
+restart polybar).
+
+    $ tail -f ~/var/log/polybarlog
+
 
 ## Build issues
 
