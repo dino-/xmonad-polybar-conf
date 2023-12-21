@@ -1,5 +1,5 @@
 - Warn for cpu and temp not yet working
 - Write an install script
 - More work on the README.md file
-- Try out fontawesome
+- Try out fontawesome (Arch package is ttf-font-awesome)
 - Make rofi icons bigger
