@@ -23,10 +23,11 @@ To use this software, some packages must be installed
 
 For basic operation, these are required
 
-- xmonad          # The xmonad window manager
-- xmonad-contrib  # Additional xmonad libs, layouts, etc..
-- polybar         # The status bar
-- xmonad-dbus     # For EWMH integration between polybar and xmonad
+- polybar           # The status bar
+- ttf-font-awesome  # For status bar icons
+- xmonad            # The xmonad window manager
+- xmonad-contrib    # Additional xmonad libs, layouts, etc..
+- xmonad-dbus       # For EWMH integration between polybar and xmonad
 
 Optional but useful
 
