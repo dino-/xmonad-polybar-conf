@@ -65,6 +65,9 @@ FYI, this log file is happening because of the `~/.config/polybar/launch.sh`
 script that was installed as part of this project. This is the script xmobar
 uses to start (and restart) polybar.
 
+On the topic of tinkering, the
+[polybar wiki](https://github.com/polybar/polybar/wiki) is the documentation.
+
 
 ## Build issues
 
