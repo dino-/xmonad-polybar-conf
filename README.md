@@ -31,7 +31,16 @@ Optional but useful
 - pavucontrol             # PulseAudio mixer, right-click on VOL to launch
 - rofi                    # Fancy app launcher, does a lot more
 
-Tray applets need to be started from somewhere, like an ~/.xinitrc X start
+If you want to use this repo as-is, not just for inspiration, it's intended to
+be cloned into the customary `.xmonad` dot-directory. A script can be run to
+create directories and create symlinks, for polybar and possibly more tools.
+
+    $ cd
+    $ git clone https://github.com/dino-/xmonad-polybar-conf.git .xmonad
+    $ cd .xmonad
+    $ ./install.sh
+
+Tray applets need to be started from somewhere, like an `~/.xinitrc` X start
 script. Probably after the window manager is started but before the script
 enters the waiting phase.
 
@@ -40,16 +49,6 @@ enters the waiting phase.
     nm-applet &
     ...
 
-If you want to use this repo as-is, not just for inspiration, it's
-intended to be cloned into the customary `.xmonad` dot-directory. A script can
-be run to create directories and create symlinks, for polybar and possibly more
-tools.
-
-    $ cd
-    $ git clone https://github.com/dino-/xmonad-polybar-conf.git .xmonad
-    $ cd .xmonad
-    $ ./install.sh
-
 The polybar config will be placed in `~/.config/polybar/config.ini`
 
 When making changes, it may be useful to watch the log for errors or info. It
@@ -57,6 +56,10 @@ will be overwritten every time xmonad is restarted (with mod-q, which will also
 restart polybar).
 
     $ tail -f ~/var/log/polybarlog
+
+FYI, this log file is happening because of the `~/.config/polybar/launch.sh`
+script that was installed as part of this project. This is the script xmobar
+uses to start (and restart) polybar.
 
 
 ## Build issues
