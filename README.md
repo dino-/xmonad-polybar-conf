@@ -26,8 +26,9 @@ For basic operation, these are required
 
 Optional but useful
 
-- network-manager-applet  # For the tray, if you use NetworkManager
 - blueberry               # For bluetooth, also includes a tray icon
+- network-manager-applet  # For the tray, if you use NetworkManager
+- pavucontrol             # PulseAudio mixer, right-click on VOL to launch
 - rofi                    # Fancy app launcher, does a lot more
 
 Tray applets need to be started from somewhere, like an ~/.xinitrc X start
