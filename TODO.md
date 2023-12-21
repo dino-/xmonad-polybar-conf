@@ -4,5 +4,6 @@
 - Try out fontawesome (Arch package is ttf-font-awesome)
 - Make rofi icons bigger
 - Work on an unread maildir module, possibly try using custom/script
+- Remove xmobar code from xmonad.hs
 
 + Get a fresher stock xmonad_orig.hs file (from the xmonad repo)
