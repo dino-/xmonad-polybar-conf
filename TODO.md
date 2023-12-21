@@ -1,0 +1,5 @@
+- Warn for cpu and temp not yet working
+- Write an install script
+- Update the README.md for polybar, include list of packages needed
+- Try out fontawesome
+- Make rofi icons bigger
