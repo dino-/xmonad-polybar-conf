@@ -3,3 +3,4 @@
 - More work on the README.md file
 - Try out fontawesome (Arch package is ttf-font-awesome)
 - Make rofi icons bigger
+- Get a fresher stock xmonad_orig.hs file (from the xmonad repo)
