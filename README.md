@@ -12,6 +12,10 @@ Because I use them together, I keep the configuration for both
 xmonad and polybar in the same `.xmonad` directory. This is a repo
 of my work on these files.
 
+Prior to this I used xmobar for my status bar (for a VERY long time, starting
+in 2008!) xmobar is a good, stable, flexible status bar but suffers from a
+couple of limitations: 1) No tray applet support, 2) No mouse click behaviors.
+
 
 ## Getting it
 
