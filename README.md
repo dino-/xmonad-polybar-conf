@@ -30,6 +30,15 @@ Optional but useful
 - blueberry               # For bluetooth, also includes a tray icon
 - rofi                    # Fancy app launcher, does a lot more
 
+Tray applets need to be started from somewhere, like an ~/.xinitrc X start
+script. Probably after the window manager is started but before the script
+enters the waiting phase.
+
+    ...
+    bluetooth-tray &
+    nm-applet &
+    ...
+
 If you want to use this repo as-is, not just for inspiration, it's
 intended to be cloned into the customary `.xmonad` dot-directory. A script can
 be run to create directories and create symlinks, for polybar and possibly more
