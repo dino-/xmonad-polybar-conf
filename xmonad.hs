@@ -4,25 +4,25 @@
 
 -- Conventional imports
 import qualified Data.Map as M
-import System.Exit ( exitSuccess )
+import System.Exit (exitSuccess)
 import XMonad
 import qualified XMonad.StackSet as W
 
 -- Added by Dino
 import XMonad.Hooks.EwmhDesktops (ewmh, ewmhFullscreen)
 import XMonad.Hooks.ManageDocks
-   ( ToggleStruts (..), avoidStruts, docks, manageDocks )
+   (ToggleStruts (..), avoidStruts, docks, manageDocks)
 import XMonad.Hooks.ManageHelpers
-   -- ( (-?>), composeOne, doCenterFloat, isDialog, transience )
-   ( (-?>), composeOne, isDialog, transience )
-import XMonad.Hooks.SetWMName ( setWMName )
-import XMonad.Layout.MultiColumns ( multiCol )
-import XMonad.Layout.Tabbed ( simpleTabbed )
-import XMonad.Layout.ThreeColumns ( ThreeCol (ThreeCol, ThreeColMid) )
-import XMonad.Prompt ( XPPosition (Top), alwaysHighlight, font
-   , position, promptBorderWidth )
-import XMonad.Prompt.ConfirmPrompt ( confirmPrompt )
-import XMonad.Prompt.Shell ( shellPrompt )
+   -- ((-?>), composeOne, doCenterFloat, isDialog, transience)
+   ((-?>), composeOne, isDialog, transience)
+import XMonad.Hooks.SetWMName (setWMName)
+import XMonad.Layout.MultiColumns (multiCol)
+import XMonad.Layout.Tabbed (simpleTabbed)
+import XMonad.Layout.ThreeColumns (ThreeCol (ThreeCol, ThreeColMid))
+import XMonad.Prompt (XPPosition (Top), alwaysHighlight, font,
+   position, promptBorderWidth)
+import XMonad.Prompt.ConfirmPrompt (confirmPrompt)
+import XMonad.Prompt.Shell (shellPrompt)
 -- import XMonad.Util.SpawnOnce (spawnOnce)
 
 
