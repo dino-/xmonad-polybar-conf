@@ -1,11 +1,6 @@
 --
 -- Dino's xmonad config file.
 --
--- A template showing all available configuration hooks,
--- and how to override the defaults in your own xmonad.hs conf file.
---
--- Normally, you'd only override those defaults you care about.
---
 
 -- Conventional imports
 import qualified Data.Map as M
@@ -28,8 +23,7 @@ import XMonad.Prompt ( XPPosition (Top), alwaysHighlight, font
    , position, promptBorderWidth )
 import XMonad.Prompt.ConfirmPrompt ( confirmPrompt )
 import XMonad.Prompt.Shell ( shellPrompt )
-import XMonad.Util.SpawnOnce (spawnOnce)
-import XMonad.Util.WorkspaceCompare ( getSortByXineramaRule )
+-- import XMonad.Util.SpawnOnce (spawnOnce)
 
 
 -- The preferred terminal program, which is used in a binding below and by
@@ -283,20 +277,12 @@ myLayout = avoidStruts $
 --
 myManageHook = manageDocks <+> composeOne
   -- None of these apps are installed on my system now
-  --[ className =? "Pidgin" -?> doFloat
-  --, className =? "XCalc"  -?> doFloat
-  --, className =? "mpv"    -?> doFloat
   [ className =? "Godot"  -?> doFloat
-
-  -- Gimp now has a single-window mode
-  --, className =? "Gimp"   -?> doFloat
 
   -- Not sure what these used to do
   --, resource  =? "desktop_window" --> doIgnore
   --, resource  =? "kdesktop"       --> doIgnore
 
-  -- This turned out to be annoying
-  -- , isDialog -?> doCenterFloat
   , isDialog -?> doFloat
 
   -- Move transient windows to their parent:
@@ -343,10 +329,6 @@ myStartupHook = do
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
--- Run xmonad with the settings you specify. No need to modify this.
---
--- main = xmonad . ewmhFullscreen =<< statusBar "xmobar" myPP toggleStrutsKey defaults
--- toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 main :: IO ()
 main = xmonad $ ewmhFullscreen . ewmh . docks $ defaults
 
