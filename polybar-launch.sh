@@ -4,5 +4,5 @@
 polybar-msg cmd quit
 
 # Launch the bar
-polybar > $HOME/var/log/polybar.log 2>&1 & disown
-# polybar -l trace > $HOME/var/log/polybar.log 2>&1 & disown
+polybar > "$HOME/var/log/polybar.log" 2>&1 & disown
+# polybar -l trace > "$HOME/var/log/polybar.log" 2>&1 & disown
