@@ -46,14 +46,15 @@ create directories and create symlinks, for polybar and possibly more tools.
     $ cd .xmonad
     $ ./install.sh
 
-Tray applets need to be started from somewhere, like an `~/.xinitrc` X start
-script. Probably after the window manager is started but before the script
-enters the waiting phase.
+Tray applets need to be started from somewhere. Add any to always be started
+with spawn statements in the `myStartupHook` section of `xmonad.hs` after
+polybar is launched, like this:
 
-    ...
-    bluetooth-tray &
-    nm-applet &
-    ...
+    myStartupHook = do
+      setWMName "LG3D"
+      spawn "~/.config/polybar/launch.sh"
+      spawn "nm-applet"  -- If you use NetworkManager, package network-manager-applet
+      spawn ...
 
 The polybar config will be linked to `~/.config/polybar/config.ini`
 

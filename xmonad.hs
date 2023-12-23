@@ -324,7 +324,8 @@ myLogHook = return ()
 myStartupHook = do
   setWMName "LG3D"
   spawn "~/.config/polybar/launch.sh"
-  -- FIXME Add spawn of nm-applet here or in .xinitrc? Other tray apps?
+  spawn "nm-applet"  -- If you use NetworkManager, package network-manager-applet
+  spawn "blueberry-tray"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
