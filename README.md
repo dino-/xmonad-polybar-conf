@@ -1,4 +1,4 @@
-# xmonad-polybar config
+# xmonad-polybar-conf
 
 
 ## Synopsis
@@ -8,9 +8,9 @@ My personal xmonad and polybar configuration (Haskell)
 
 ## Description
 
-Because I use them together, I keep the configuration for both
-xmonad and polybar in the same `.xmonad` directory. This is a repo
-of my work on these files.
+Because I use them together, I keep the configuration for both xmonad and
+polybar in the same `.xmonad` directory. This is a repo of my work on these
+files.
 
 Prior to this I used xmobar for my status bar (for a VERY long time, starting
 in 2008!) xmobar is a good, stable, flexible status bar but suffers from a
@@ -38,35 +38,19 @@ Optional but useful
 - rofi                    # Fancy app launcher, does a lot more
 
 If you want to use this repo as-is, not just for inspiration, it's intended to
-be cloned into the customary `.xmonad` dot-directory. A script can be run to
-create directories and create symlinks, for polybar and possibly more tools.
+be cloned into the customary `.xmonad` dot-directory.
 
     $ cd  # Your HOME directory
     $ git clone https://github.com/dino-/xmonad-polybar-conf.git .xmonad
     $ cd .xmonad
-    $ ./install.sh
 
-Tray applets need to be started from somewhere. Add any to always be started
-with spawn statements in the `myStartupHook` section of `xmonad.hs` after
-polybar is launched, like this:
-
-    myStartupHook = do
-      setWMName "LG3D"
-      spawn "~/.config/polybar/launch.sh"
-      spawn "nm-applet"  -- If you use NetworkManager, package network-manager-applet
-      spawn ...
-
-The polybar config will be linked to `~/.config/polybar/config.ini`
+Configure things by editing `xmonad.hs` and `polybar-config.ini`
 
 When making changes, it may be useful to watch the log for errors or info. It
 will be overwritten every time xmonad is restarted (with mod-q, which will also
 restart polybar).
 
-    $ tail -f ~/var/log/polybar.log
-
-FYI, this log file is happening because of the `~/.config/polybar/launch.sh`
-script that was installed as part of this project. This is the script xmobar
-uses to start (and restart) polybar.
+    $ tail -f ~/.xmonad/polybar.log
 
 On the topic of tinkering, the
 [polybar wiki](https://github.com/polybar/polybar/wiki) is the documentation.

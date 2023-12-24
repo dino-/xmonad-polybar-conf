@@ -7,3 +7,5 @@ prompt-history
 xmonad.errors
 xmonad.state
 xmonad-x86_64-linux
+
+polybar.log
