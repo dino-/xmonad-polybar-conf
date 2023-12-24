@@ -33,7 +33,8 @@ For basic operation, these are required
 Optional but useful
 
 - blueberry               # For bluetooth, also includes a tray icon
-- network-manager-applet  # For the tray, if you use NetworkManager
+- network-manager-applet  # nm-applet for the tray, if you use NetworkManager
+- nm-connection-editor    # Can be launched by nm-applet
 - pavucontrol             # PulseAudio mixer, right-click on VOL to launch
 - rofi                    # Fancy app launcher, does a lot more
 
