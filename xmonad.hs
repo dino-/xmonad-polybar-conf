@@ -9,6 +9,7 @@ import XMonad
 import qualified XMonad.StackSet as W
 
 -- Added by Dino
+import System.FilePath ((</>), (<.>))
 import Text.Printf (printf)
 import XMonad.Hooks.EwmhDesktops (ewmh, ewmhFullscreen)
 import XMonad.Hooks.ManageDocks
@@ -320,6 +321,8 @@ myLogHook = return ()
 -- By default, do nothing.
 -- myStartupHook = return ()
 myStartupHook = do
+  let xmonadDir = "~" </> ".xmonad"
+
   -- 2020-05-11 Added specifically because of the black window contents problem
   -- with Java Swing apps
   setWMName "LG3D"
@@ -330,8 +333,8 @@ myStartupHook = do
   spawn "polybar-msg cmd quit"
 
   -- Can tail this log file in a terminal
-  let polybarLogPath = "~/.xmonad/polybar.log"
-  let polybarConfPath = "~/.xmonad/polybar-config.ini"
+  let polybarLogPath = xmonadDir </> "polybar" <.> "log"
+  let polybarConfPath = xmonadDir </> "polybar-config" <.> "ini"
 
   spawn $ printf "polybar --config=%s > %s 2>&1" polybarConfPath polybarLogPath
 
@@ -340,7 +343,9 @@ myStartupHook = do
 
   -- Tray applets started here
   spawn "nm-applet"  -- If you use NetworkManager, package network-manager-applet
-  spawn "blueberry-tray"
+  -- spawn "blueberry-tray"
+  -- This tray applet is crashing sometimes, try to get some logging
+  spawn $ printf "blueberry-tray > %s 2>&1" $ xmonadDir </> "blueberry" <.> "log"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
