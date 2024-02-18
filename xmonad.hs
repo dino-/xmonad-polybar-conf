@@ -177,10 +177,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. controlMask, xK_l   ), spawn "xscreensaver-command -lock; sleep 1; xset dpms force off")
 
     -- launch XMonad app prompt
-    , ((modm,               xK_p     ), shellPrompt myXPConfig)
+    , ((modm .|. shiftMask, xK_p     ), shellPrompt myXPConfig)
 
     -- app launcher
-    , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show-icons -show drun")
+    , ((modm,               xK_p     ), spawn "rofi -show-icons -show drun")
 
     -- Mouse button pressing and holding. Note: xte is in arch package xautomation
     , ((modm              , xK_F1    ), spawn "xte 'usleep 500000' 'mouseclick 1'")  -- left mouse button click
@@ -391,8 +391,8 @@ help = unlines
    , ""
    , "-- launching and killing programs"
    , "mod-Shift-Enter  Launch " ++ myTerminal
-   , "mod-p            Launch shell prompt"
-   , "mod-Shift-p      Launch rofi (an app launcher, among other things)"
+   , "mod-p            rofi app launcher"
+   , "mod-Shift-p      xmonad built-in app launcher"
    , "mod-Shift-c      Close/kill the focused window"
    , "mod-Space        Rotate through the available layout algorithms"
    , "mod-Shift-Space  Reset the layouts on the current workSpace to default"
