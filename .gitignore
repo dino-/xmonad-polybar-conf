@@ -9,3 +9,4 @@ xmonad.state
 xmonad-x86_64-linux
 
 *.log
+*.BAK
