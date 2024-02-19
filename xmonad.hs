@@ -343,9 +343,7 @@ myStartupHook = do
 
   -- Tray applets started here
   spawn "nm-applet"  -- If you use NetworkManager, package network-manager-applet
-  -- spawn "blueberry-tray"
-  -- This tray applet is crashing sometimes, try to get some logging
-  spawn $ printf "blueberry-tray > %s 2>&1" $ xmonadDir </> "blueberry" <.> "log"
+  spawn "blueman-applet"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
