@@ -1,7 +1,10 @@
 - Warn for cpu and temp not yet working
 - More work on the README.md file
 - Make rofi icons bigger
-- Work on an unread maildir module, possibly try using custom/script
+- Work on an unread maildir module, possibly try using custom/script or inotify
+- Make alternative, smaller date/clock
+- UTC clock
+- More accurate battery monitor
 
 + Write an install script
 + Remove xmobar code from xmonad.hs
