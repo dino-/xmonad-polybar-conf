@@ -187,6 +187,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_F1    ), spawn "xte 'mousedown 1'")  -- left mouse button lock
     , ((modm              , xK_F2    ), spawn "xte 'usleep 500000' 'mouseclick 2'")  -- middle mouse button click
     , ((modm              , xK_F3    ), spawn "xte 'usleep 500000' 'mouseclick 3'")  -- right mouse button click
+
+    -- Fetch email
+    , ((modm .|. controlMask, xK_m   ), spawn "mailctl sync")
     ]
     ++
 
@@ -397,6 +400,7 @@ help = unlines
    -- , "mod-n            Resize/refresh viewed windows to the correct size"
    , "mod-Shift-l      Lock workstation with xscreensaver"
    , "mod-Ctrl-l       Lock workstation with xscreensaver and power monitors down"
+   , "mod-Ctrl-m       Fetch email"
    , ""
    , "-- move focus up or down the window stack"
    , "mod-Tab        Move focus to the next window"
