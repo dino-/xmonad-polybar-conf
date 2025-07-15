@@ -189,7 +189,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_F3    ), spawn "xte 'usleep 500000' 'mouseclick 3'")  -- right mouse button click
 
     -- Fetch email
-    , ((modm .|. controlMask, xK_m   ), spawn "mailctl sync")
+    , ((modm .|. controlMask, xK_m   ), spawn "notify-send 'Checking email...'; mailctl sync")
     ]
     ++
 
