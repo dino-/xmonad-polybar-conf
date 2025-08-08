@@ -25,10 +25,10 @@ For basic operation, these are required
 
 - polybar           # The status bar
 - ttf-dejavu        # Main font for text/numbers
-- ttf-font-awesome  # For status bar icons
 - xmonad            # The xmonad window manager
 - xmonad-contrib    # Additional xmonad libs, layouts, etc..
 - xmonad-dbus       # For EWMH integration between polybar and xmonad
+- woff2-font-awesome  # For status bar icons
 
 Optional but useful
 
